@@ -63,28 +63,24 @@ export const CalculatorButton = ({ label, position, type, onClick }: CalculatorB
 
   return (
     <group position={buttonPosition}>
-      <RoundedBox
+      <mesh
         ref={meshRef}
-        args={buttonSize}
-        radius={0.05}
-        smoothness={4}
         onPointerEnter={() => setHovered(true)}
         onPointerLeave={() => setHovered(false)}
         onClick={handleClick}
         castShadow
       >
+        <boxGeometry args={buttonSize} />
         <meshPhysicalMaterial
           color={getButtonColor()}
           emissive={getEmissiveColor()}
           emissiveIntensity={0.1}
           metalness={0.1}
           roughness={0.1}
-          clearcoat={1}
-          clearcoatRoughness={0.1}
           transparent
           opacity={0.9}
         />
-      </RoundedBox>
+      </mesh>
       
       <Text
         position={[0, 0, 0.06]}
@@ -92,7 +88,6 @@ export const CalculatorButton = ({ label, position, type, onClick }: CalculatorB
         color="white"
         anchorX="center"
         anchorY="middle"
-        font="/fonts/helvetiker_bold.typeface.json"
       >
         {label}
       </Text>

@@ -6,6 +6,8 @@ import { useCalculator } from '../hooks/useCalculator';
 export const Calculator3D = () => {
   const calculator = useCalculator();
 
+  console.log('Calculator3D rendering, calculator state:', calculator.display);
+
   return (
     <div className="w-full h-screen bg-background">
       <Canvas
@@ -23,6 +25,12 @@ export const Calculator3D = () => {
         />
         <pointLight position={[0, 5, 0]} intensity={0.3} color="#4dd0ff" />
         <pointLight position={[-5, 0, 5]} intensity={0.2} color="#9d4edd" />
+        
+        {/* Test cube to verify Three.js is working */}
+        <mesh position={[0, 0, 0]}>
+          <boxGeometry args={[1, 1, 1]} />
+          <meshStandardMaterial color="#4dd0ff" />
+        </mesh>
         
         <CalculatorBody calculator={calculator} />
         

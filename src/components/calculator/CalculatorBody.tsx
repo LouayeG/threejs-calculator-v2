@@ -13,6 +13,8 @@ interface CalculatorBodyProps {
 export const CalculatorBody = ({ calculator }: CalculatorBodyProps) => {
   const groupRef = useRef<Group>(null);
 
+  console.log('CalculatorBody rendering with display:', calculator.display);
+
   // Gentle floating animation
   useFrame((state) => {
     if (groupRef.current) {
@@ -70,22 +72,18 @@ export const CalculatorBody = ({ calculator }: CalculatorBodyProps) => {
   return (
     <group ref={groupRef} position={[0, 0, 0]}>
       {/* Calculator body */}
-      <RoundedBox
-        args={[4, 3.5, 0.3]}
-        radius={0.1}
-        smoothness={4}
+      <mesh
         position={[0, 0, -0.15]}
         castShadow
         receiveShadow
       >
+        <boxGeometry args={[4, 3.5, 0.3]} />
         <meshPhysicalMaterial
           color="#1a1a2e"
           metalness={0.8}
           roughness={0.2}
-          clearcoat={1}
-          clearcoatRoughness={0.1}
         />
-      </RoundedBox>
+      </mesh>
 
       {/* Display */}
       <CalculatorDisplay 

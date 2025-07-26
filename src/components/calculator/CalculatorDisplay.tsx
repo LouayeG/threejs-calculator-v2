@@ -23,31 +23,23 @@ export const CalculatorDisplay = ({ value, position }: CalculatorDisplayProps) =
   return (
     <group position={position}>
       {/* Display background */}
-      <RoundedBox
+      <mesh
         ref={meshRef}
-        args={[3.5, 0.6, 0.05]}
-        radius={0.05}
-        smoothness={4}
         position={[0, 0, -0.025]}
       >
+        <boxGeometry args={[3.5, 0.6, 0.05]} />
         <meshPhysicalMaterial
           color="#0a0a0a"
           emissive="#00cccc"
           emissiveIntensity={0.4}
           metalness={0.1}
           roughness={0.1}
-          clearcoat={1}
-          clearcoatRoughness={0.1}
         />
-      </RoundedBox>
+      </mesh>
 
       {/* Display border glow */}
-      <RoundedBox
-        args={[3.6, 0.7, 0.02]}
-        radius={0.06}
-        smoothness={4}
-        position={[0, 0, -0.04]}
-      >
+      <mesh position={[0, 0, -0.04]}>
+        <boxGeometry args={[3.6, 0.7, 0.02]} />
         <meshPhysicalMaterial
           color="#4dd0ff"
           emissive="#4dd0ff"
@@ -55,7 +47,7 @@ export const CalculatorDisplay = ({ value, position }: CalculatorDisplayProps) =
           transparent
           opacity={0.3}
         />
-      </RoundedBox>
+      </mesh>
 
       {/* Display text */}
       <Text
@@ -64,7 +56,6 @@ export const CalculatorDisplay = ({ value, position }: CalculatorDisplayProps) =
         color="#00ffff"
         anchorX="right"
         anchorY="middle"
-        font="/fonts/helvetiker_regular.typeface.json"
         maxWidth={3.2}
       >
         {value || '0'}
