@@ -61,6 +61,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				calc: {
+					display: 'hsl(var(--calc-display))',
+					'display-text': 'hsl(var(--calc-display-text))',
+					body: 'hsl(var(--calc-body))',
+					button: 'hsl(var(--calc-button))',
+					'button-hover': 'hsl(var(--calc-button-hover))',
+					number: 'hsl(var(--calc-number))',
+					operator: 'hsl(var(--calc-operator))',
+					equals: 'hsl(var(--calc-equals))',
+					clear: 'hsl(var(--calc-clear))'
+				},
+				glow: {
+					primary: 'hsl(var(--glow-primary))',
+					secondary: 'hsl(var(--glow-secondary))',
+					accent: 'hsl(var(--glow-accent))'
 				}
 			},
 			borderRadius: {
