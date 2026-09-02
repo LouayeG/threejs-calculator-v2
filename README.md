@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# Three.js Calculator
 
-## Project info
+An interactive 3D calculator built with React, TypeScript, Vite, Tailwind CSS, and Three.js.
 
-**URL**: https://lovable.dev/projects/2f6ea90c-81d1-4bf9-8356-6082dc1308d3
+The app renders a calculator as a manipulable 3D model with clickable buttons, animated hover/press feedback, and a calculator-style display.
 
-## How can I edit this code?
+## Demo
 
-There are several ways of editing your application.
+Add a demo GIF here once it is ready:
 
-**Use Lovable**
+```md
+![Three.js Calculator demo](public/demo.gif)
+```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2f6ea90c-81d1-4bf9-8356-6082dc1308d3) and start prompting.
+Recommended option: place the GIF in `public/demo.gif` and commit it with the repo. That keeps the README self-contained and works reliably on GitHub.
 
-Changes made via Lovable will be committed automatically to this repo.
+If the GIF is large, upload it to a GitHub issue, pull request, or release, then copy the generated asset URL into the README instead. GitHub is usually better than linking to random external image hosts because the asset stays tied to the project.
 
-**Use your preferred IDE**
+## Features
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Interactive 3D calculator model
+- Clickable 3D buttons
+- Hover glow and press feedback
+- Green LCD-style display
+- Basic arithmetic operations
+- Responsive full-screen canvas
+- Built with React Three Fiber and Drei
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Tech Stack
 
-Follow these steps:
+- React
+- TypeScript
+- Vite
+- Three.js
+- React Three Fiber
+- Drei
+- Tailwind CSS
+- shadcn/ui
+
+## Getting Started
+
+Install dependencies:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Run the development server:
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Build for production:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build
+```
 
-**Use GitHub Codespaces**
+Preview the production build:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```sh
+npm run preview
+```
 
-## What technologies are used for this project?
+## Project Structure
 
-This project is built with:
+```txt
+src/
+  components/
+    Calculator3D.tsx
+    calculator/
+      CalculatorBody.tsx
+      CalculatorButton.tsx
+      CalculatorDisplay.tsx
+  hooks/
+    useCalculator.ts
+  pages/
+    Index.tsx
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Notes
 
-## How can I deploy this project?
+The calculator currently supports basic arithmetic. Future improvements could include keyboard input, backspace, percentage support, better mobile controls, and unit tests for calculator behavior.
 
-Simply open [Lovable](https://lovable.dev/projects/2f6ea90c-81d1-4bf9-8356-6082dc1308d3) and click on Share -> Publish.
+## License
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+MIT
