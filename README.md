@@ -1,30 +1,24 @@
 # Three.js Calculator
 
-An interactive 3D calculator built with React, TypeScript, Vite, Tailwind CSS, and Three.js.
+An interactive 3D calculator built with React, TypeScript, Vite, and Three.js.
 
-The app renders a calculator as a manipulable 3D model with clickable buttons, animated hover/press feedback, and a calculator-style display.
-
-## Demo
-
-Add a demo GIF here once it is ready:
-
-```md
 ![Three.js Calculator demo](public/demo.gif)
-```
 
-Recommended option: place the GIF in `public/demo.gif` and commit it with the repo. That keeps the README self-contained and works reliably on GitHub.
+## Overview
 
-If the GIF is large, upload it to a GitHub issue, pull request, or release, then copy the generated asset URL into the README instead. GitHub is usually better than linking to random external image hosts because the asset stays tied to the project.
+Three.js Calculator is a browser-based calculator rendered as a 3D object. The calculator can be rotated, zoomed, and used directly by clicking the 3D buttons.
+
+The project focuses on combining a simple calculator experience with a polished WebGL interface using React Three Fiber.
 
 ## Features
 
 - Interactive 3D calculator model
-- Clickable 3D buttons
-- Hover glow and press feedback
+- Clickable calculator buttons
+- Animated hover and press feedback
 - Green LCD-style display
 - Basic arithmetic operations
 - Responsive full-screen canvas
-- Built with React Three Fiber and Drei
+- Custom lighting and material styling
 
 ## Tech Stack
 
@@ -45,7 +39,7 @@ Install dependencies:
 npm install
 ```
 
-Run the development server:
+Start the development server:
 
 ```sh
 npm run dev
@@ -69,6 +63,7 @@ npm run preview
 src/
   components/
     Calculator3D.tsx
+    Footer.tsx
     calculator/
       CalculatorBody.tsx
       CalculatorButton.tsx
@@ -77,11 +72,19 @@ src/
     useCalculator.ts
   pages/
     Index.tsx
+
+public/
+  demo.gif
 ```
 
-## Notes
+## Roadmap
 
-The calculator currently supports basic arithmetic. Future improvements could include keyboard input, backspace, percentage support, better mobile controls, and unit tests for calculator behavior.
+- Keyboard input support
+- Backspace and percentage operations
+- Improved mobile controls
+- More calculator functions
+- Unit tests for calculator logic
+- Optional 2D fallback for accessibility
 
 ## License
 
